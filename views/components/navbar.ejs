@@ -1,0 +1,33 @@
+<nav class="navbar bg-body-tertiary">
+    <div
+      class="container-fluid justify-content-center justify-content-md-between"
+    >
+      <a class="navbar-brand fw-medium fs-3 mb-1 mb-md-0"
+        >Webbrical Dashboard</a
+      >
+
+      <form class="d-flex" role="search" action="/search" method="post">
+        <input
+          class="form-control me-2"
+          type="search"
+        
+          name="searchText"
+          id="search"
+          placeholder="Search"
+          aria-label="Search"
+        />
+        <button class="btn btn-outline-success" id="submit" type="submit">
+          Search
+        </button>
+      </form>
+    </div>
+  </nav>
+
+  <script>
+    document.getElementById('submit').onclick = (e)=>{
+      if(document.getElementById('search').value.trim() == ""){
+        e.preventDefault()
+        document.getElementById('search').style.borderColor ="red"
+      }
+    }
+  </script>
