@@ -24,10 +24,15 @@
   </nav>
 
   <script>
+    let searchArea = document.getElementById('search')
     document.getElementById('submit').onclick = (e)=>{
-      if(document.getElementById('search').value.trim() == ""){
+      if(searchArea.value.trim() == ""){
         e.preventDefault()
-        document.getElementById('search').style.borderColor ="red"
+        searchArea.style.borderColor ="red"
+      }
+      searchArea.onchange = ()=>{
+        searchArea.style.borderColor = "gray"
       }
     }
+
   </script>
