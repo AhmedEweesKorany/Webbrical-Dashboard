@@ -382,7 +382,7 @@ app.delete("/deleteuser/:id",(req,res)=>{
 
 mongoose
   .connect(
-    "mongodb+srv://ahmedewaisvi34:Vime3FQ41v3hD5e4@cluster0.hkxsfbr.mongodb.net/?retryWrites=true&w=majority"
+    ""// add your database link here 
   )
   .then(() => {
     app.listen(port, () => {
